@@ -1,0 +1,31 @@
+.grid-container {
+    display: grid;
+    grid-template-areas:
+     "photo photo"
+     "title title"
+     "friends posts"
+     "about about";
+   }
+   
+   .grid-item {
+    border: 2px solid #D9E8FB;
+    text-align: center;
+    padding: 5px;
+    background-color:#F4F8FE;
+   }
+   
+   .photo {
+    grid-area: photo;
+   }
+   
+   .title {
+    grid-area: title;
+   }
+   
+   .posts {
+    grid-area: posts;
+   }
+   
+   .about {
+    grid-area: about;
+   }
