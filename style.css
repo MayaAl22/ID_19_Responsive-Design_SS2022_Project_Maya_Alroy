@@ -1,12 +1,15 @@
 .grid-container {
     display: grid;
-    grid-template-areas:
-     "photo photo"
-     "title title"
-     "friends posts"
-     "about about";
+    grid-area: auto;
+    grid-gap: 5px;
+    justify-items: stretch;
    }
    
+   .header{
+     padding: 5px;
+     background: #D4E9EF;
+   }
+
    .grid-item {
     border: 2px solid #D9E8FB;
     text-align: center;
