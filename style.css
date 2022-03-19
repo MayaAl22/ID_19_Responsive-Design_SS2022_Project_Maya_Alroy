@@ -1,34 +1,70 @@
-.grid-container {
-    display: grid;
-    grid-area: auto;
-    grid-gap: 5px;
-    justify-items: stretch;
-   }
-   
-   .header{
-     padding: 5px;
-     background: #D4E9EF;
+.navbar{
+    flex-basis: 100%;
+    padding: 5px;
+    background: #D4E9EF;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
    }
 
-   .grid-item {
-    border: 2px solid #D9E8FB;
-    text-align: center;
-    padding: 5px;
-    background-color:#F4F8FE;
+.nav-list{
+    box-sizing: border-box;
+}
+
+.nav-list .list-item{
+    display: inline-block;
+    padding: 20px;
+}
+
+.menu{
+    display: none;
+}
+
+.menu-line{
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    margin-bottom: 3px;
+}
+
+@media all and (max-wisth: 480px) {
+    .navbar{
+        display: none;
+    }
+    .menu{
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
    }
    
-   .photo {
-    grid-area: photo;
+.photo {
+    flex-basis: 100%;
+    width: 1280px;
    }
    
-   .title {
-    grid-area: title;
+.title {
+    flex-basis: 100%;
+    width: 1280px;
    }
    
-   .posts {
-    grid-area: posts;
+.projects {
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    width: 400px;
+    height: 200px;
    }
    
-   .about {
-    grid-area: about;
+.about {
+    flex-basis: 100%;
+    width: 1280px;
    }
