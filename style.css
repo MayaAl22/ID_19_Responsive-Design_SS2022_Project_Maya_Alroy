@@ -1,4 +1,4 @@
-.navbar{
+.navbar-desktop{
     flex-basis: 100%;
     padding: 5px;
     background: #D4E9EF;
@@ -8,43 +8,57 @@
     font-size: 20px;
    }
 
-.nav-list{
+.navbar-desktop-menu{
     box-sizing: border-box;
 }
 
-.nav-list .list-item{
+.navbar-desktop-menu .list-item{
     display: inline-block;
     padding: 20px;
 }
 
-.menu{
+.navbar-mobile{
     display: none;
 }
 
-.menu-line{
+.navbar-mobile-menu{
+    overflow: hidden;
+    float: right;
+    width: 20px;
+    height: 18px;
+    padding: 3px 3px;
+}
+
+.navbar-mobile-menu-line {
     width: 20px;
     height: 3px;
     background-color: black;
     margin-bottom: 3px;
 }
 
-@media all and (max-wisth: 480px) {
-    .navbar{
+@media all and (max-width: 480px) {
+    .navbar-desktop{
         display: none;
     }
-    .menu{
-        display: inline-block;
-        position: absolute;
-        right: 15px;
-        top: 15px;
+    .navbar-mobile{
+        display: flex;
+        padding: 5px;
+        background: #D4E9EF;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .navbar-mobile-menu{
+        position: relative;
+        left: 300px;
     }
 }
 
 .grid-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
     flex-wrap: wrap;
+    justify-content: center;
    }
    
 .photo {
@@ -60,6 +74,7 @@
 .projects {
     flex-basis: 100%;
     flex-wrap: nowrap;
+    flex-direction: row;
     width: 400px;
     height: 200px;
    }
